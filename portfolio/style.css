@@ -22,8 +22,9 @@ body {
   line-height: 40px;
   color: #fff;
   background-color: rgb(92, 87, 87);
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
+  /* background-color: #000; */
 }
 
 
@@ -41,7 +42,6 @@ body {
 }
 
 .header__logo {
-  background-image: url(assets/svg/logo.svg);
   margin-top: 20px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -51,8 +51,6 @@ body {
 .header__logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
-
-.menu {}
 
 .menu__list {
   display: flex;
@@ -85,8 +83,6 @@ body {
 .menu__link--back {
   margin-left: 9px;
 }
-
-.main {}
 
 .hero {
   background-image: url('./assets/img/bg.jpg');
@@ -124,8 +120,6 @@ body {
   border: 0px;
   background-color: #bdae82;
   cursor: pointer;
-  height: 55px;
-  width: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,12 +128,9 @@ body {
   font-size: 20px;
   line-height: 40px;
   color: #000;
-  padding-top: 1px;
+  padding: 8px 74px 7px 74px;
 }
 
-.skills {
-  background-color: #000;
-}
 
 .container__title {
   position: relative;
@@ -167,7 +158,8 @@ body {
   color: #BDAE82;
   background-color: #000;
   position: relative;
-  width: 152px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   justify-content: center;
 }
@@ -239,4 +231,57 @@ body {
   padding-top: 21px;
   margin: 0px 19px 7px 20px;
   text-align: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-left: 272px;
+  margin-right: 273px;
+  gap: 5px;
+}
+
+.btn__link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+  background-color: #000;
+  border: 2px solid #bdae82;
+  cursor: pointer;
+  width: 220px;
+  height: 55px;
+  margin-bottom: 60px;
+}
+
+.btn__link--active {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000;
+  background-color: #bdae82;
+  border: 2px solid #bdae82;
+  cursor: pointer;
+  width: 220px;
+  height: 55px;
+  margin-bottom: 60px;
+  margin-left: 5px;
+}
+
+/* .btn__link+.btn__link {
+  margin-left: 5px;
+} */
+
+.portfolio__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 25px;
+  margin-left: 20px;
+}
+
+.portfolio__img {
+  width: 450px;
+  height: 560px;
 }
