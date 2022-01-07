@@ -612,15 +612,15 @@ body {
   width: 188px;
   margin-right: 19px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__rightside-item {
-  width: 33px;
   display: flex;
   justify-content: center;
 }
 
-.footer__social-link {
+.footer__social-link img {
   display: flex;
 }
 
