@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap"
     rel="stylesheet">
-  <link rel="favicon" href="/assets/img/favicon.jpg" type="image/jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="/assets/img/favicon.jpg">
   <title>Portfolio</title>
 </head>
 
@@ -112,7 +112,7 @@
         <button class="btn__link">Winter</button>
         <button class="btn__link">Spring</button>
         <button class="btn__link">Summer</button>
-        <button class="btn__link--active">Autumn</button>
+        <button class="btn__link-active">Autumn</button>
       </div>
       <div class="portfolio__content">
         <img src="assets/img/portfolio-img1.jpg" alt="#" class="portfolio__img">
@@ -188,20 +188,36 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__left-side">
+    <div class="footer__leftside">
       <p class="footer__copyright">©</p>
       <p class="footer__year">2022</p>
       <a href="https://github.com/pug000" class="footer__github-link">github</a>
     </div>
-    <div class="footer__middle-side">
+    <div class="footer__middleside">
       <a href="https://rs.school/js-stage0/" class="footer__rsschool-link">Rolling Scopes School</a>
     </div>
-    <div class="footer__right-side">
-      <a href="#" class="footer__social-link footer__inst"></a>
-      <a href="#" class="footer__social-link footer__tw"></a>
-      <a href="#" class="footer__social-link footer__fb"></a>
-      <a href="#" class="footer__social-link footer__pinterest"></a>
-    </div>
+    <ul class="footer__rightside-list">
+      <li class="footer__rightside-item">
+        <a href="#" class="footer__social-link">
+          <img src="./assets/svg/inst.svg" alt="inst_icon">
+        </a>
+      </li>
+      <li class="footer__rightside-item">
+        <a href="#" class="footer__social-link">
+          <img src="./assets/svg/fb.svg" alt="fb_icon">
+        </a>
+      </li>
+      <li class="footer__rightside-item">
+        <a href="#" class="footer__social-link">
+          <img src="./assets/svg/tw.svg" alt="tw_icon">
+        </a>
+      </li>
+      <li class="footer__rightside-item">
+        <a href="#" class="footer__social-link">
+          <img src="./assets/svg/pinterest.svg" alt="pinterest_icon">
+        </a>
+      </li>
+    </ul>
   </footer>
   <script src="index.js"></script>
 </body>
