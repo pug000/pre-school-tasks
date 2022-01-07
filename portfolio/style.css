@@ -197,22 +197,22 @@ body {
 }
 
 .skills__items:nth-child(1) {
-  background-image: url(assets/svg/camera.svg);
+  background-image: url('./assets/svg/camera.svg');
   background-size: 62px 50px;
 }
 
 .skills__items:nth-child(2) {
-  background-image: url(assets/svg/video.svg);
+  background-image: url('./assets/svg/video.svg');
   background-size: 62px 50px;
 }
 
 .skills__items:nth-child(3) {
-  background-image: url(assets/svg/image.svg);
+  background-image: url('./assets/svg/image.svg');
   background-size: 78px 58px;
 }
 
 .skills__items:nth-child(4) {
-  background-image: url(assets/svg/mic.svg);
+  background-image: url('./assets/svg/mic.svg');
   background-size: 34px 50px;
 }
 
@@ -317,7 +317,7 @@ body {
 
 .video__btn-play {
   position: absolute;
-  background-image: url(assets/svg/btn-play.svg);
+  background-image: url('./assets/svg/btn-play.svg');
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -396,7 +396,7 @@ body {
 }
 
 .contacts {
-  background-image: url(assets/img/contacts-bg.jpg);
+  background-image: url('./assets/img/contacts-bg.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   padding-bottom: 196px;
@@ -547,22 +547,22 @@ body {
 }
 
 .footer__social-link:nth-child(1) {
-  background-image: url(assets/svg/inst.svg);
+  background-image: url('./assets/svg/inst.svg');
   width: 31px;
 }
 
 .footer__social-link:nth-child(2) {
-  background-image: url(assets/svg/fb.svg);
+  background-image: url('./assets/svg/fb.svg');
   width: 31px;
 }
 
 .footer__social-link:nth-child(3) {
-  background-image: url(assets/svg/tw.svg);
+  background-image: url('./assets/svg/tw.svg');
   width: 30px;
 }
 
 .footer__social-link:nth-child(4) {
-  background-image: url(assets/svg/pinterest.svg);
+  background-image: url('./assets/svg/pinterest.svg');
   width: 32px;
 }
 
