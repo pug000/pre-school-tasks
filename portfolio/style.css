@@ -391,6 +391,10 @@ body {
   margin-bottom: 23px;
 }
 
+.btn__price:hover {
+  color: #fff;
+}
+
 .contacts {
   background-image: url(assets/img/contacts-bg.jpg);
   background-position: center center;
@@ -493,6 +497,10 @@ body {
   height: 55px;
 }
 
+.btn__contacts:hover {
+  color: #fff;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -558,6 +566,6 @@ body {
   width: 32px;
 }
 
-.footer__social-item:hover {
+.footer__social-link:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
