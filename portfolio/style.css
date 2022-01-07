@@ -24,12 +24,6 @@ span {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
-  color: #fff;
-  background-color: rgb(92, 87, 87);
   width: 1440px;
   margin: 0 auto;
   background-color: #000;
