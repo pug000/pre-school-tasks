@@ -10,6 +10,44 @@
   scroll-behavior: smooth;
 }
 
+body {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120px;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -23,12 +61,6 @@ span {
   display: block;
 }
 
-body {
-  width: 1440px;
-  margin: 0 auto;
-  background-color: #000;
-}
-
 
 .header__container {
   padding: 0px 19px 0 20px;
@@ -40,7 +72,6 @@ body {
 .header__top {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 8px;
 }
 
 .header__logo {
@@ -58,8 +89,7 @@ body {
 
 .menu {
   display: flex;
-  margin-right: 32px;
-  margin-right: 33px;
+  margin-right: 31px;
   margin-left: auto;
 }
 
@@ -68,8 +98,6 @@ body {
 }
 
 .menu__item {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 20px;
   line-height: 50px;
   color: #fff;
@@ -78,19 +106,8 @@ body {
   margin-bottom: 20px;
 }
 
-.menu__link:after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: #fff;
-  transition: width 0.4s ease-in-out;
-  margin-top: -10px;
-}
-
-.menu__link:hover:after,
-.menu__link:focus:after {
-  width: 100%;
+.menu__link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .menu__item+.menu__item {
@@ -99,39 +116,29 @@ body {
 
 .language__item {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 20px;
   line-height: 50px;
   color: #fff;
   display: flex;
   align-items: center;
-  padding-top: 7px;
-  gap: 0px 10px;
+  gap: 0px 8px;
 }
 
 .language__link-active {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 50px;
   color: #BDAE82;
+  margin-right: 2px;
 }
 
-.language__link-active:hover {
-  color: #fff;
-}
 
 .language__link-back {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 50px;
   color: #fff;
 }
 
 .language__link-back:hover {
   color: #bdae82;
 }
+
 
 .hero {
   background-image: url('./assets/img/hero-bg.jpg');
@@ -149,21 +156,13 @@ body {
 }
 
 .hero__title {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 120px;
   color: #fff;
   margin-bottom: 10px;
 }
 
 .hero__text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .hero__btn {
@@ -173,13 +172,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 20px;
   line-height: 40px;
   color: #000;
+  padding: 9px 25px 6px 27px;
   width: 220px;
-  height: 55px;
+  height: auto;
 }
 
 .hero__btn:hover {
@@ -195,8 +193,8 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
-  margin-bottom: 61px;
+  padding-top: 101px;
+  margin-bottom: 60px;
 }
 
 .container__title::before {
@@ -210,10 +208,6 @@ body {
 }
 
 .section__title {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 80px;
   color: #BDAE82;
   background-color: #000;
   position: relative;
@@ -227,14 +221,14 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .skills__items {
   background-position: center top;
   padding-top: 100px;
   background-repeat: no-repeat;
-  margin-left: 20px;
-  margin-right: 20px;
   width: 320px;
   height: 240px;
 }
@@ -271,47 +265,53 @@ body {
 }
 
 .skill__subtitle {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .skill__text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 36px;
   color: #fff;
   padding-top: 21px;
-  margin: 0px 19px 7px 20px;
-  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn__container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-left: 272px;
   margin-right: 273px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 
 .btn__link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #bdae82;
   background-color: #000;
   border: 2px solid #bdae82;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: baseline;
+  padding: 6px 27px 5px 27px;
   width: 220px;
-  height: 55px;
-  margin-bottom: 60px;
+  height: auto;
 }
 
 .btn__link:hover {
@@ -323,18 +323,19 @@ body {
 }
 
 .btn__link-active {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #000;
   background-color: #bdae82;
   border: 2px solid #bdae82;
   cursor: pointer;
-  width: 220px;
-  height: 55px;
-  margin-bottom: 60px;
   margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: baseline;
+  padding: 6px 27px 5px 27px;
+  width: 220px;
+  height: auto;
 }
 
 .btn__link-active:hover {
@@ -354,6 +355,7 @@ body {
   flex-wrap: wrap;
   gap: 25px 25px;
   margin-left: 20px;
+  margin-bottom: -1px;
 }
 
 .portfolio__img {
@@ -389,8 +391,10 @@ body {
 .price__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: -1px;
 }
 
 .price__card {
@@ -402,7 +406,7 @@ body {
   align-items: center;
   text-align: center;
   border: 2px solid #bdae82;
-  margin-bottom: 98px;
+  margin-bottom: 100px;
 }
 
 .price__title {
@@ -411,7 +415,9 @@ body {
   font-size: 28px;
   line-height: 56px;
   color: #fff;
-  padding-top: 20px;
+  padding-top: 22px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .price__value {
@@ -421,29 +427,37 @@ body {
   line-height: 48px;
   color: #BDAE82;
   padding-top: 3px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
 }
 
+
 .price__text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 36px;
   color: #fff;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .btn__price {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #000;
   background-color: #bdae82;
   border: 2px solid #bdae82;
   cursor: pointer;
+  margin-bottom: 22px;
+  padding: 6px 36px 5px 37px;
   width: 220px;
-  height: 55px;
-  margin-bottom: 24px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  align-items: center;
 }
 
 .btn__price:hover {
@@ -467,27 +481,19 @@ body {
 .contacts__container {
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 }
 
 .contacts__title {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 80px;
   color: #BDAE82;
-  margin-bottom: 39px;
-  padding-top: 60px;
+  margin-bottom: 40px;
 }
 
 .textarea__content {
   display: flex;
   flex-flow: column;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #BDAE82;
-  margin-bottom: 14px;
+  gap: 20px 0px;
 }
 
 .input__contacts {
@@ -495,13 +501,10 @@ body {
   border: 2px solid #bdae82;
   width: 450px;
   height: 50px;
-  margin-bottom: 20px;
   padding-left: 18px;
   padding-top: 1px;
   outline: none;
   resize: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 20px;
   line-height: 40px;
   color: #bdae82;
@@ -512,16 +515,12 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   width: 450px;
   height: 100px;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
   padding-left: 18px;
   padding-top: 4px;
   resize: none;
   outline: none;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #bdae82;
 }
 
@@ -546,16 +545,13 @@ body {
 }
 
 .btn__contacts {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   color: #000;
   background-color: #bdae82;
   border: 2px solid #bdae82;
   cursor: pointer;
+  padding: 6px 36px 5px 37px;
   width: 220px;
-  height: 55px;
+  height: auto;
 }
 
 .btn__contacts:hover {
@@ -571,8 +567,6 @@ body {
   justify-content: space-between;
   padding-top: 50px;
   margin-bottom: 50px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 20px;
   line-height: 50px;
   color: #fff;
@@ -595,39 +589,18 @@ body {
   margin-left: 20px;
 }
 
-.footer__github-link:after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: #fff;
-  transition: width 0.4s ease-in-out;
-  margin-top: -10px;
-}
-
-.footer__github-link:hover:after,
-.footer__github-link:focus:after {
-  width: 100%;
+.footer__github-link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 
 .footer__middleside {
-  margin-left: 18px;
+  margin-left: 19px;
 }
 
-.footer__rsschool-link:after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: #fff;
-  transition: width 0.4s ease-in-out;
-  margin-top: -10px;
-}
 
-.footer__rsschool-link:hover:after,
-.footer__rsschool-link:focus:after {
-  width: 100%;
+.footer__rsschool-link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .footer__rightside-list {
@@ -645,6 +618,8 @@ body {
 
 .footer__social-link img {
   display: flex;
+  width: 28px;
+  height: 28px;
 }
 
 .footer__social-link:hover {
