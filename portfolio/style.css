@@ -693,6 +693,16 @@ span {
   .skill__text {
     line-height: 27px;
   }
+
+  .video__player {
+    height: 605px;
+  }
+
+  .video__btn-play {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -714,6 +724,15 @@ span {
     background-position: -5px -90px;
     background-size: auto 780px;
     height: 780px;
+  }
+
+  .video__player {
+    height: 518px;
+  }
+
+  .video__btn-play {
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -755,6 +774,15 @@ span {
   .btn__link+.btn__link {
     margin-left: 0px;
   }
+
+  .video__player {
+    height: 484px;
+  }
+
+  .video__btn-play {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 860px) {
@@ -767,10 +795,18 @@ span {
     background-size: auto 660px;
   }
 
+  .main {
+    gap: 85px 0px;
+  }
+
   .hero {
     background-position: -5px -90px;
     background-size: auto 660px;
     height: 660px;
+  }
+
+  .container__title {
+    margin-bottom: 55px;
   }
 
   .skills__items {
@@ -779,6 +815,15 @@ span {
 
   .skill__text {
     line-height: 21px;
+  }
+
+  .video__player {
+    height: 435px;
+  }
+
+  .video__btn-play {
+    width: 75px;
+    height: 75px;
   }
 }
 
@@ -857,6 +902,10 @@ span {
     opacity: 0.5;
   }
 
+  .main {
+    gap: 80px 0px;
+  }
+
   .hero {
     background-position: -5px -90px;
     height: 590px;
@@ -877,4 +926,16 @@ span {
     margin-bottom: 60px;
   }
 
+  .container__title {
+    margin-bottom: 50px;
+  }
+
+  .video__player {
+    height: 387px;
+  }
+
+  .video__btn-play {
+    height: 65px;
+    width: 65px;
+  }
 }
