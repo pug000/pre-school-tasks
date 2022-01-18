@@ -705,6 +705,13 @@ span {
   }
 }
 
+@media (max-width: 1370px) {
+  .price__container {
+    justify-content: center;
+    gap: 60px 60px;
+  }
+}
+
 @media (max-width: 1024px) {
   body {
     max-width: 1024px;
@@ -782,6 +789,11 @@ span {
   .video__btn-play {
     width: 80px;
     height: 80px;
+  }
+
+  .price__container {
+    justify-content: center;
+    gap: 50px 61px;
   }
 }
 
