@@ -732,6 +732,29 @@ span {
     background-size: auto 730px;
     height: 730px;
   }
+
+  .btn__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+  }
+
+  .winter__btn {
+    justify-self: end;
+  }
+
+  .summer__btn {
+    justify-self: end;
+  }
+
+  .btn__link-active {
+    margin-left: 0px;
+  }
+
+  .btn__link+.btn__link {
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 860px) {
