@@ -13,7 +13,7 @@
 body {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: rgb(66, 49, 49);
+  background-color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -240,7 +240,6 @@ span {
   background-repeat: no-repeat;
   width: 320px;
   height: 240px;
-  /* flex: 0 1 25%; */
 }
 
 .skill__item {
@@ -345,6 +344,10 @@ span {
   margin-left: 5px;
 }
 
+.portfolio__img {
+  max-width: 98%;
+}
+
 .portfolio__content {
   display: flex;
   flex-wrap: wrap;
@@ -355,15 +358,15 @@ span {
 
 .video__player {
   position: relative;
+  height: auto;
+  margin-bottom: 86px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: contain;
-  background-position: center center;
-  background-image: url('./assets/img/video-player.jpg');
-  background-repeat: no-repeat;
-  height: 705px;
-  margin-bottom: 100px;
+}
+
+.video__player img {
+  width: 99%;
 }
 
 .video__btn-play {
@@ -658,7 +661,6 @@ span {
 
 @media (max-width: 1439px) {
   body {
-    max-width: 1439px;
     font-size: 20px;
     line-height: 40px;
   }
@@ -691,9 +693,6 @@ span {
 }
 
 @media (max-width: 1200px) {
-  body {
-    max-width: 1200px;
-  }
 
   h1 {
     font-size: 56px;
@@ -724,10 +723,6 @@ span {
     line-height: 27px;
   }
 
-  .video__player {
-    height: 605px;
-  }
-
   .video__btn-play {
     width: 100px;
     height: 100px;
@@ -736,10 +731,6 @@ span {
 }
 
 @media (max-width: 1024px) {
-  body {
-    max-width: 1024px;
-  }
-
   h1 {
     font-size: 52px;
     line-height: 100px;
@@ -760,10 +751,6 @@ span {
     height: 780px;
   }
 
-  .video__player {
-    height: 518px;
-  }
-
   .video__btn-play {
     width: 90px;
     height: 90px;
@@ -771,9 +758,6 @@ span {
 }
 
 @media (max-width: 960px) {
-  body {
-    max-width: 960px;
-  }
 
   .header__container {
     background-position: -5px 0px;
@@ -813,10 +797,6 @@ span {
     margin-left: 0px;
   }
 
-  .video__player {
-    height: 484px;
-  }
-
   .video__btn-play {
     width: 80px;
     height: 80px;
@@ -851,7 +831,6 @@ span {
 
 @media (max-width: 860px) {
   body {
-    max-width: 860px;
     line-height: 28px;
   }
 
@@ -897,10 +876,6 @@ span {
 
   .skill__text {
     line-height: 21px;
-  }
-
-  .video__player {
-    height: 435px;
   }
 
   .video__btn-play {
@@ -953,7 +928,6 @@ span {
 
 @media (max-width: 768px) {
   body {
-    max-width: 768px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -982,9 +956,9 @@ span {
     display: flex;
     flex-direction: column;
     background-color: #000;
-    width: 620px;
+    width: 80%;
     height: 100vh;
-    padding: 134px 409px 817px 127px;
+    padding: 134px 0 0 127px;
     gap: 16px 0px;
     z-index: 20;
     transform: translateX(100%);
@@ -1092,12 +1066,8 @@ span {
   }
 
   .video__player {
-    height: 438px;
-    padding-top: 18px;
-    margin-bottom: 100px;
-    background-size: contain;
-    background-position: 0px 19px;
-    background-image: url('./assets/img/adaptive-video-player.jpg');
+    padding-top: 19px;
+    margin-bottom: 95px;
   }
 
   .video__btn-play {
@@ -1152,5 +1122,220 @@ span {
   .footer__rightside-list {
     margin-left: 3px;
     margin-right: 0px;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .header__container {
+    background-size: auto 550px;
+  }
+
+  .hero {
+    background-size: auto 550px;
+    height: 446px;
+  }
+
+  .hero__container {
+    padding-top: 60px;
+  }
+
+  .skills__content {
+    padding: 0px 0px 0px 0px;
+    gap: 0px 0px;
+  }
+
+  .contacts {
+    background-size: 720px auto;
+    padding-bottom: 45px;
+  }
+
+  .contacts__container {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 660px) {
+  body {
+    font-size: 18px;
+  }
+
+  .header__container {
+    background-size: auto 520px;
+  }
+
+  .hero {
+    background-size: auto 520px;
+    height: 415px;
+  }
+
+  .hero__container {
+    width: 400px;
+    padding-top: 40px;
+  }
+
+  .skills__content {
+    grid-template-columns: 1fr;
+    gap: 60px 0px;
+    padding: 0px 50px 0px 50px;
+  }
+}
+
+@media (max-width: 610px) {
+
+  .header__container {
+    background-size: auto 475px;
+  }
+
+  .hero {
+    background-size: auto 475px;
+    height: 370px;
+  }
+
+  .hero__title {
+    margin-bottom: 15px;
+  }
+
+  .hero__text {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .header__container {
+    background-position: -120px -30px;
+    padding: 5px 15px 0px 15px;
+  }
+
+  .hero {
+    background-position: -120px -95px;
+  }
+
+  .hero__container {
+    padding-top: 45px;
+  }
+
+  .hero__title {
+    margin-bottom: 10px;
+  }
+
+  .hero__text {
+    margin-bottom: 35px;
+  }
+
+  .btn__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn__link {
+    width: 96%;
+  }
+
+  .btn__link-active {
+    width: 96%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu__list {
+    padding: 134px 0 0 65px;
+    width: 80%;
+  }
+
+  .contacts {
+    display: block;
+  }
+
+  .contacts__container {
+    display: block;
+    text-align: center;
+  }
+
+  .input__contacts {
+    width: 99%;
+  }
+
+  .textarea {
+    width: 99%;
+  }
+}
+
+@media (max-width: 420px) {
+
+  h1 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .header__container {
+    background-position: -185px -30px;
+  }
+
+  .hero {
+    background-position: -185px -95px;
+  }
+
+  .hero__container {
+    width: 300px;
+    padding-left: 35px;
+  }
+
+  .price__card {
+    width: 98%;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__container {
+    background-position: -240px -30px;
+    padding: 5px 10px 0 10px;
+  }
+
+  .menu__list {
+    width: 90%;
+    padding: 134px 0 0 50px;
+  }
+
+  .language__item {
+    gap: 0px 0px;
+  }
+
+  .language__link-active {
+    margin-right: 2px;
+  }
+
+  .language__link-back {
+    margin-left: 2px;
+  }
+
+  .hero {
+    background-position: -240px -95px;
+    margin-bottom: 70px;
+  }
+
+  .hero__container {
+    padding-left: 10px;
+  }
+
+  .container__title::before {
+    width: 95%;
+  }
+
+  .skills__content {
+    margin-bottom: 100px;
+  }
+
+  .portfolio__content {
+    margin-bottom: 70px;
+  }
+
+  .video__player {
+    margin-bottom: 70px;
+  }
+
+  .price__container {
+    margin-bottom: 65px;
   }
 }

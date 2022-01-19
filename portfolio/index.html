@@ -133,6 +133,11 @@
         <h2 class="section__title">Video</h2>
       </div>
       <div class="video__player">
+        <picture>
+          <source srcset="assets/img/video-player.jpg" type="image/jpeg" media="(min-width:1024px)">
+          <source srcset="assets/img/adaptive-video-player.jpg" type="image/jpeg" media="(max-width:768px)">
+          <img src="assets/img/video-player.jpg" alt="video_preview">
+        </picture>
         <button class="video__btn-play"></button>
       </div>
     </section>
