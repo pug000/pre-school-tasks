@@ -71,12 +71,12 @@ span {
   background: url('./assets/img/hero-bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
-  display: flex;
-  text-align: start;
 }
 
 .header__top {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.1fr 1.2fr 0.1fr;
+  gap: 0px 2px;
 }
 
 .header__logo {
@@ -96,10 +96,8 @@ span {
 }
 
 .menu {
-  display: flex;
-  margin-right: 31px;
-  margin-left: 809px;
-  justify-content: flex-end;
+  display: grid;
+  justify-self: self-end;
 }
 
 .menu__list {
@@ -133,6 +131,7 @@ span {
   display: flex;
   align-items: center;
   gap: 0px 8px;
+  justify-self: self-end;
 }
 
 .language__link-active {
@@ -665,6 +664,32 @@ span {
   }
 }
 
+@media (max-width: 1370px) {
+  .price__container {
+    justify-content: center;
+    gap: 60px 60px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .skills__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0px 50px 0px 50px;
+    gap: 75px 75px;
+  }
+
+  .skills__items {
+    width: 300px;
+    height: 224px;
+    justify-self: center;
+    padding-top: 97px;
+    background-position: 50% 10%;
+    margin: 0px 0px;
+  }
+}
+
 @media (max-width: 1200px) {
   body {
     max-width: 1200px;
@@ -680,6 +705,10 @@ span {
     background-size: auto 820px;
   }
 
+  .header__top {
+    gap: 0 8px;
+  }
+
   .hero {
     background-position: 0px -90px;
     background-size: auto 820px;
@@ -689,16 +718,6 @@ span {
   .hero__container {
     padding-left: 80px;
     padding-top: 130px;
-  }
-
-  .skills__content {
-    gap: 76px 0px;
-  }
-
-  .skills__items {
-    flex: 0 1 35%;
-    margin-left: 25px;
-    margin-right: 25px;
   }
 
   .skill__text {
@@ -716,13 +735,6 @@ span {
   }
 }
 
-@media (max-width: 1370px) {
-  .price__container {
-    justify-content: center;
-    gap: 60px 60px;
-  }
-}
-
 @media (max-width: 1024px) {
   body {
     max-width: 1024px;
@@ -736,6 +748,10 @@ span {
   .header__container {
     background-position: -5px 0px;
     background-size: auto 780px;
+  }
+
+  .header__top {
+    gap: 0px 20px;
   }
 
   .hero {
@@ -768,6 +784,10 @@ span {
     background-position: -5px -90px;
     background-size: auto 730px;
     height: 730px;
+  }
+
+  .container__title::before {
+    width: 550px;
   }
 
   .btn__container {
@@ -832,6 +852,17 @@ span {
 @media (max-width: 860px) {
   body {
     max-width: 860px;
+    line-height: 28px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .header__container {
@@ -843,11 +874,21 @@ span {
   .hero {
     background-position: -5px -90px;
     background-size: auto 660px;
-    height: 660px;
+    height: 570px;
   }
 
+  .hero__container {
+    width: 500px;
+  }
+
+
   .container__title {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
+  }
+
+  .container__title::before {
+    width: 364px;
+    margin-top: 19px;
   }
 
   .skills__items {
@@ -884,6 +925,30 @@ span {
     font-size: 34px;
     line-height: 66px;
   }
+
+  .footer {
+    line-height: 24px;
+    padding-top: 29px;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 4px;
+    margin-bottom: 30px;
+  }
+
+  .footer__leftside {
+    margin-left: 0px;
+    margin-bottom: 16px;
+  }
+
+  .footer__middleside {
+    margin-bottom: 31px;
+    margin-left: 0px;
+  }
+
+  .footer__rightside-list {
+    margin-left: 3px;
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -893,30 +958,20 @@ span {
     line-height: 24px;
   }
 
-  h1 {
-    font-size: 32px;
-    line-height: 64px;
-  }
-
-  h2 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
   .header__container {
     background-position: -5px -30px;
     background-size: auto 620px;
-    padding: 15px 64px 0px 60px;
+    padding: 16px 64px 0px 60px;
+  }
+
+  .header__top {
+    grid-template-columns: 0.1fr 1.2fr 0.1fr 0.1fr;
+    gap: 0px 0px;
   }
 
   .header__logo {
     width: 50px;
     height: 60px;
-  }
-
-  .menu {
-    margin-left: 441px;
-    margin-right: 0px;
   }
 
   .menu__list {
@@ -1009,16 +1064,6 @@ span {
     padding: 9px 71px 5px 75px;
   }
 
-
-  .container__title {
-    margin-bottom: 50px;
-  }
-
-  .container__title::before {
-    width: 364px;
-    margin-top: 19px;
-  }
-
   .skills__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1050,8 +1095,9 @@ span {
     height: 438px;
     padding-top: 18px;
     margin-bottom: 100px;
-    background-size: 814px 418px;
-    background-position: -2px 20px;
+    background-size: contain;
+    background-position: 0px 19px;
+    background-image: url('./assets/img/adaptive-video-player.jpg');
   }
 
   .video__btn-play {
