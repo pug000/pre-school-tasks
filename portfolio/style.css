@@ -366,7 +366,7 @@ span {
 }
 
 .video__player img {
-  width: 99%;
+  width: 100%;
 }
 
 .video__btn-play {
@@ -962,7 +962,7 @@ span {
     gap: 16px 0px;
     z-index: 20;
     transform: translateX(100%);
-    transition: transform 0.5s;
+    transition: transform 0.8s;
   }
 
   .menu__list.active {
