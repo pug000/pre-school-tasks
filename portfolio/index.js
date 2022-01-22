@@ -7,6 +7,9 @@ const portfolioBtns = document.querySelector('.btn__container');
 const portfolioBtn = document.querySelectorAll('.btn__portfolio');
 const portfolioImgs = document.querySelectorAll('.portfolio__img');
 
+//////////////////////////switch theme//////////////////////////
+
+
 
 
 //////////////////////////burger menu//////////////////////////
