@@ -302,7 +302,7 @@ span {
 }
 
 
-.btn__link {
+.btn__portfolio {
   color: #bdae82;
   background-color: #000;
   border: 2px solid #bdae82;
@@ -312,29 +312,27 @@ span {
   transition: 0.3s ease-out;
 }
 
-.btn__link:hover {
+.btn__portfolio:hover {
   color: #fff;
 }
 
-.btn__link:active {
+.btn__portfolio:active {
   color: #bdae82;
 }
 
-.btn__link-active {
+.btn__portfolio.active {
   color: #000;
   background-color: #bdae82;
   border: 2px solid #bdae82;
   cursor: pointer;
-  padding: 6px 27px 5px 27px;
-  width: 220px;
   transition: 0.3s ease-out;
 }
 
-.btn__link-active:hover {
+.btn__portfolio.active:hover {
   color: #fff;
 }
 
-.btn__link-active:active {
+.btn__portfolio.active:active {
   color: #000;
 }
 
@@ -713,7 +711,8 @@ span {
   }
 
   .menu__list {
-    position: fixed;
+    position: absolute;
+    overflow: hidden;
     right: 0;
     top: 0;
     text-align: center;
@@ -847,19 +846,19 @@ span {
     margin-bottom: 60px;
   }
 
-  .winter__btn {
+  .btn__portfolio[data-season='winter'] {
     justify-self: end;
   }
 
-  .summer__btn {
+  .btn__portfolio[data-season='summer'] {
     justify-self: end;
   }
 
-  .btn__link-active {
+  .btn__portfolio.active {
     margin-left: 0px;
   }
 
-  .btn__link+.btn__link {
+  .btn__portfolio+.btn__portfolio {
     margin-left: 0px;
   }
 
@@ -1015,11 +1014,11 @@ span {
     margin-bottom: 35px;
   }
 
-  .btn__link {
+  .btn__portfolio {
     width: 180px;
   }
 
-  .btn__link-active {
+  .btn__portfolio.active {
     width: 180px;
   }
 
@@ -1069,11 +1068,11 @@ span {
     width: 100%;
   }
 
-  .btn__link {
+  .btn__portfolio {
     width: 96%;
   }
 
-  .btn__link-active {
+  .btn__portfolio.active {
     width: 96%;
   }
 
