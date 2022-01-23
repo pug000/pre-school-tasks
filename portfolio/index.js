@@ -6,21 +6,30 @@ const menuLink = document.querySelectorAll('.menu__link');
 const portfolioBtns = document.querySelector('.btn__container');
 const portfolioBtn = document.querySelectorAll('.btn__portfolio');
 const portfolioImgs = document.querySelectorAll('.portfolio__img');
-
+const arrayClasses = ['body', '.header__container', '.header__logo', '.language__link', '.hero', '.hero__btn', '.section__title', '.btn__portfolio', '.contacts', '.contacts__title', '.input__contacts', '.textarea', '.btn__contacts', 'footer__social-link img', '.line', '.menu__list', '.inst', '.fb', '.tw', '.pinterest'];
+const switchThemeBtn = document.querySelector('.switch__theme');
 //////////////////////////switch theme//////////////////////////
+switchThemeBtn.addEventListener('click', switchTheme);
 
+function switchTheme(event) {
+  event.target.classList.toggle('light')
+  arrayClasses.forEach(classes => {
+    document.querySelectorAll(classes).forEach(classes => {
+      classes.classList.toggle('light');
+    })
+  })
+}
 
-
+switchTheme;
 
 //////////////////////////burger menu//////////////////////////
+menuBtn.addEventListener('click', slider)
 function slider() {
   if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      document.body.classList.toggle('lock');
-      menuBtn.classList.toggle('active');
-      menu.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-    });
+    document.body.classList.toggle('lock');
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
   };
 };
 slider();

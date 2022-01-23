@@ -248,7 +248,7 @@ span {
   color: #000;
 }
 
-.hero__btn:active .light {
+.hero__btn.light:active {
   color: #bdae82;
 }
 
@@ -400,7 +400,7 @@ span {
   transition: 0.3s ease-out;
 }
 
-.btn__portfolio.active.light {
+.btn__portfolio.light.active {
   background-color: #1C1C1C;
   color: #bdae82;
 }
@@ -720,10 +720,45 @@ span {
   transition: 0.3s ease-out;
 }
 
-.footer__social-link img {
+.footer__social-icon {
   display: flex;
   width: 28px;
   height: 28px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.inst {
+  background-image: url('./assets/svg/dark/inst.svg');
+}
+
+.inst.light {
+  background-image: url('./assets/svg/light/light-inst.svg');
+}
+
+.fb {
+  background-image: url('./assets/svg/dark/fb.svg');
+}
+
+.fb.light {
+  background-image: url('./assets/svg/light/light-fb.svg');
+}
+
+.tw {
+  background-image: url('./assets/svg/dark/tw.svg');
+}
+
+.tw.light {
+  background-image: url('./assets/svg/light/light-tw.svg');
+}
+
+.pinterest {
+  background-image: url('./assets/svg/dark/pinterest.svg');
+}
+
+.pinterest.light {
+  background-image: url('./assets/svg/light/light-pinterest.svg');
 }
 
 .footer__social-link:hover {
