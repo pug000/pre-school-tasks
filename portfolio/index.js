@@ -1,3 +1,7 @@
+({
+  plugins: ["jsdom-quokka-plugin"]
+})
+import i18Obj from './translate.js';
 //////////////////////////const//////////////////////////
 const menuBtn = document.querySelector('.hamburger__btn');
 const menu = document.querySelector('.menu__list');
@@ -6,8 +10,11 @@ const menuLink = document.querySelectorAll('.menu__link');
 const portfolioBtns = document.querySelector('.btn__container');
 const portfolioBtn = document.querySelectorAll('.btn__portfolio');
 const portfolioImgs = document.querySelectorAll('.portfolio__img');
-const arrayClasses = ['body', '.header__container', '.header__logo', '.language__link', '.hero', '.hero__btn', '.section__title', '.btn__portfolio', '.contacts', '.contacts__title', '.input__contacts', '.textarea', '.btn__contacts', 'footer__social-link img', '.line', '.menu__list', '.inst', '.fb', '.tw', '.pinterest'];
+const arrayClasses = ['body', '.header__container', '.header__logo', '.language__item', '.hero', '.hero__btn', '.section__title', '.btn__portfolio', '.contacts', '.contacts__title', '.input__contacts', '.textarea', '.btn__contacts', 'footer__social-link img', '.line', '.menu__list', '.inst', '.fb', '.tw', '.pinterest'];
 const switchThemeBtn = document.querySelector('.switch__theme');
+const datasetLanguage = document.querySelectorAll('[data-i18]');
+const languageBtns = document.querySelector('.language__container');
+
 //////////////////////////switch theme//////////////////////////
 switchThemeBtn.addEventListener('click', switchTheme);
 
@@ -67,20 +74,22 @@ function changeImage(event) {
 }
 changeImage();
 
-portfolioBtn.forEach((btn, index) => btn.addEventListener('click', changeClassActive));
+portfolioBtn.forEach(btn => btn.addEventListener('click', changeClassActive));
+
 
 function changeClassActive(event) {
   portfolioBtn.forEach((btn) => {
     btn.classList.remove('active')
   });
   event.target.classList.add('active');
+
 }
 
 changeClassActive;
 
 
 //////////////////////////complete tasks//////////////////////////
-const completeTask = "Вёрстка валидная +10\nВёрстка семантическая +20\nВёрстка соответствует макету +48\nТребования к css +12\nИнтерактивность, реализуемая через css +20\nИтого: 110 баллов";
-const completeTast2 = "Вёрстка соответствует макету. Ширина экрана 768px +48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню +22\n"
-console.log(completeTask);
-console.log(completeTast2);
+// const completeTask = "Вёрстка валидная +10\nВёрстка семантическая +20\nВёрстка соответствует макету +48\nТребования к css +12\nИнтерактивность, реализуемая через css +20\nИтого: 110 баллов";
+// const completeTast2 = "Вёрстка соответствует макету. Ширина экрана 768px +48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню +22\n"
+// console.log(completeTask);
+// console.log(completeTast2);
