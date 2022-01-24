@@ -13,7 +13,8 @@ const portfolioImgs = document.querySelectorAll('.portfolio__img');
 const arrayClasses = ['body', '.header__container', '.header__logo', '.language__item', '.hero', '.hero__btn', '.section__title', '.btn__portfolio', '.contacts', '.contacts__title', '.input__contacts', '.textarea', '.btn__contacts', 'footer__social-link img', '.line', '.menu__list', '.inst', '.fb', '.tw', '.pinterest'];
 const switchThemeBtn = document.querySelector('.switch__theme');
 const datasetLanguage = document.querySelectorAll('[data-i18]');
-const languageBtns = document.querySelector('.language__container');
+const btnEn = document.querySelector('.language__en');
+const btnRu = document.querySelector('.language__ru');
 
 //////////////////////////switch theme//////////////////////////
 switchThemeBtn.addEventListener('click', switchTheme);
