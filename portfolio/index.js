@@ -12,9 +12,8 @@ const portfolioBtn = document.querySelectorAll('.btn__portfolio');
 const portfolioImgs = document.querySelectorAll('.portfolio__img');
 const arrayClasses = ['body', '.header__container', '.header__logo', '.language__item', '.hero', '.hero__btn', '.section__title', '.btn__portfolio', '.contacts', '.contacts__title', '.input__contacts', '.textarea', '.btn__contacts', 'footer__social-link img', '.line', '.menu__list', '.inst', '.fb', '.tw', '.pinterest'];
 const switchThemeBtn = document.querySelector('.switch__theme');
-const datasetLanguage = document.querySelectorAll('[data-i18]');
-const btnEn = document.querySelector('.language__en');
-const btnRu = document.querySelector('.language__ru');
+const datasetLanguage = document.querySelectorAll('[data-i18n]');
+const langBtns = document.querySelectorAll('.language__item');
 
 //////////////////////////switch theme//////////////////////////
 switchThemeBtn.addEventListener('click', switchTheme);
@@ -28,7 +27,28 @@ function switchTheme(event) {
   })
 }
 
-switchTheme;
+//////////////////////////translate page//////////////////////////
+langBtns.forEach(btn => btn.addEventListener('click', switchLang));
+
+function switchLang(event) {
+  langBtns.forEach(btn => {
+    btn.classList.remove('active');
+    event.target.classList.add('active');
+    if (event.target.dataset.lang === 'en') {
+      getTranslate(i18Obj.en);
+    }
+    if (event.target.dataset.lang === 'ru') {
+      getTranslate(i18Obj.ru);
+    }
+  });
+}
+
+function getTranslate(language) {
+  datasetLanguage.forEach(item => {
+    item.textContent = language[item.dataset.i18n]
+  })
+}
+
 
 //////////////////////////burger menu//////////////////////////
 menuBtn.addEventListener('click', slider)
@@ -40,7 +60,6 @@ function slider() {
     menuOverlay.classList.toggle('active');
   };
 };
-slider();
 
 menuLink.forEach(link => link.addEventListener('click', closeMenu));
 
@@ -60,7 +79,6 @@ function closeMenu() {
     });
   };
 };
-closeMenu();
 
 
 //////////////////////////portfolio image//////////////////////////
@@ -73,7 +91,6 @@ function changeImage(event) {
     }
   })
 }
-changeImage();
 
 portfolioBtn.forEach(btn => btn.addEventListener('click', changeClassActive));
 
@@ -81,12 +98,9 @@ portfolioBtn.forEach(btn => btn.addEventListener('click', changeClassActive));
 function changeClassActive(event) {
   portfolioBtn.forEach((btn) => {
     btn.classList.remove('active')
+    event.target.classList.add('active');
   });
-  event.target.classList.add('active');
-
 }
-
-changeClassActive;
 
 
 //////////////////////////complete tasks//////////////////////////
