@@ -135,7 +135,7 @@ span {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
-.switch-language__container {
+.switch-language {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -150,11 +150,11 @@ span {
   transition: 0.3s ease-out;
 }
 
-.language__item[data-lang="en"] {
+.lang__en {
   margin-right: 1px;
 }
 
-.language__item[data-lang="ru"] {
+.lang__ru {
   margin-left: 1px;
 }
 
@@ -957,7 +957,7 @@ span {
     line-height: 73px;
   }
 
-  .switch-language__container {
+  .switch-language {
     gap: 0px 3px;
     margin-right: 15px;
   }
