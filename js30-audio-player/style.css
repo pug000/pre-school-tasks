@@ -6,12 +6,20 @@
   padding: 0;
 }
 
+main {
+  display: flex;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   display: flex;
   background: #000;
+}
+
+a {
+  text-decoration: none;
 }
 
 .background {
@@ -178,4 +186,44 @@ body {
   width: 0;
   background-color: coral;
   height: 100%;
+}
+
+footer {
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 50px 7px 50px;
+  gap: 20px;
+}
+
+.github {
+  color: #fff;
+  background-image: url('./assets/icons/github.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+
+.year {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.rsschool {
+  background-image: url('./assets/icons/rs_school.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 80px;
+  filter: invert(1);
 }
