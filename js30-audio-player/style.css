@@ -1,0 +1,174 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  background: #000;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  z-index: -1;
+  background-image: url('./assets/images/endless-love.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 70%;
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #000;
+}
+
+.song-img {
+  background-image: url('./assets/images/endless-love.jpg');
+  background-position: center -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.song-img.active {
+  transform: scale(1.15);
+}
+
+.audio-player__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-self: flex-end;
+  background-color: rgb(143, 106, 146);
+  height: 30%;
+  bottom: 0;
+  padding: 5px 5px 10px 5px;
+}
+
+.song-name__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+}
+
+.song-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 5px;
+}
+
+.song-autor {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+
+.buttons__box {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  width: 90%;
+  align-self: center;
+}
+
+.prev-song {
+  cursor: pointer;
+  background-image: url('./assets/icons/prev.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.prev-song:hover {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+}
+
+.play-pause {
+  cursor: pointer;
+  background-image: url('./assets/icons/play.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}
+
+.play-pause:hover {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+}
+
+.play-pause.active {
+  background-image: url('./assets/icons/pause.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}
+
+.next-song {
+  cursor: pointer;
+  background-image: url('./assets/icons/next.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}
+
+.next-song:hover {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+}
+
+.music-progress__box {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 5px;
+}
+
+.music-progress {
+  width: 60%;
+}
+
+.currentTime {}
+
+.durationTime {}

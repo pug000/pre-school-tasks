@@ -5,12 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Music Player</title>
 </head>
 
 <body>
-
+  <div class="background"></div>
+  <audio src="assets/music/DVRST,OBLXKQ-Endless-Love.mp3"></audio>
+  <div class="container">
+    <div class="song-img"></div>
+    <div class="audio-player__container">
+      <div class="song-name__box">
+        <div class="song-title">Endless Love</div>
+        <div class="song-autor">DVRST, OBLXKQ</div>
+      </div>
+      <div class="buttons__box">
+        <button class="prev-song"></button>
+        <button class="play-pause"></button>
+        <button class="next-song"></button>
+      </div>
+      <div class="music-progress__box">
+        <div class="currentTime">0:00</div>
+        <input type="range" class="music-progress" min="0" max="200" value="0">
+        <div class="durationTime">2:59</div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
