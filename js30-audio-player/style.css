@@ -28,7 +28,7 @@ a {
   height: 100%;
   filter: blur(10px);
   z-index: -1;
-  background-image: url('./assets/images/endless-love.jpg');
+  background-image: url('./assets/images/Endless Love.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 70%;
@@ -52,7 +52,7 @@ a {
 }
 
 .song-img {
-  background-image: url('./assets/images/endless-love.jpg');
+  background-image: url('./assets/images/endless love.jpg');
   background-position: center -100px;
   background-repeat: no-repeat;
   background-size: cover;

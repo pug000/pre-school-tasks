@@ -1,3 +1,8 @@
+({
+  plugins: ["jsdom-quokka-plugin"]
+})
+
+
 //////////////////////////const//////////////////////////
 const audio = document.querySelector('.audio');
 const progress = document.querySelector('.progress-bar');
@@ -12,9 +17,26 @@ const audioDuration = document.querySelector('.duration-time');
 const volumeBtn = document.querySelector('.volume-button')
 const volumeProgressContainer = document.querySelector('.volume-progress__container');
 const volumeProgress = document.querySelector('.volume-progress');
-const volumeBox = document.querySelector('.volume__box')
+const volumeBox = document.querySelector('.volume__box');
+const titleSong = document.querySelector('.song-title');
+const autorSong = document.querySelector('.song-autor');
+const background = document.querySelector('.background');
+const songImg = document.querySelector('.song-img');
 let isPlay = false;
+let playNum = 0;
+let songs = ['Endless Love', 'Let It Happen'];
+let songAutors = ['DVRST, OBLXKQ', 'Tame Impala'];
 
+//////////////////////////change songs//////////////////////////
+function loadSongs(song, autor) {
+  titleSong.innerHTML = song;
+  autorSong.innerHTML = autor;
+  audio.src = `./assets/music/${song}.mp3`;
+  background.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
+  songImg.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
+
+}
+loadSongs(songs[playNum], songAutors[playNum]);
 
 //////////////////////////play-pause//////////////////////////
 function playAudio() {
@@ -69,7 +91,7 @@ function getTimeAudio(number) {
   return `${min}:${String(sec % 60).padStart(2, 0)}`;
 }
 
-//////////////////////////volume//////////////////////////
+//////////////////////////change volume//////////////////////////
 volumeBtn.addEventListener('click', (event) => {
   if (event.target.classList.contains('volume-button')) {
     event.target.classList.toggle('muted');
