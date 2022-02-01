@@ -1,8 +1,3 @@
-({
-  plugins: ["jsdom-quokka-plugin"]
-})
-
-
 //////////////////////////const//////////////////////////
 const audio = document.querySelector('.audio');
 const progress = document.querySelector('.progress-bar');
@@ -24,8 +19,8 @@ const background = document.querySelector('.background');
 const songImg = document.querySelector('.song-img');
 let isPlay = false;
 let playNum = 0;
-let songs = ['Endless Love', 'Let It Happen'];
-let songAutors = ['DVRST, OBLXKQ', 'Tame Impala'];
+let songs = ['Endless Love', 'Let It Happen', 'KILLKA', 'Blue Monday', 'Vanished'];
+let songAutors = ['DVRST, OBLXKQ', 'Tame Impala', 'Ghostface Playa, Fkbambam', 'HEALTH', 'Crystal Castle'];
 
 //////////////////////////change songs//////////////////////////
 function loadSongs(song, autor) {
@@ -36,7 +31,27 @@ function loadSongs(song, autor) {
   songImg.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
 
 }
-loadSongs(songs[playNum], songAutors[playNum]);
+
+nextBtn.addEventListener('click', playNext);
+prevBtn.addEventListener('click', playPrev)
+
+function playNext() {
+  playNum++;
+  if (playNum > songs.length - 1) {
+    playNum = 0;
+  }
+  loadSongs(songs[playNum], songAutors[playNum]);
+  playAudio();
+}
+
+function playPrev() {
+  playNum--;
+  if (playNum < 0) {
+    playNum = songs.length - 1;
+  }
+  loadSongs(songs[playNum], songAutors[playNum]);
+  playAudio();
+}
 
 //////////////////////////play-pause//////////////////////////
 function playAudio() {
@@ -72,6 +87,7 @@ function setProgressBar(event) {
   const clickX = event.offsetX;
   const duration = audio.duration;
   audio.currentTime = (clickX / lineWidth) * duration;
+  playAudio();
 };
 
 

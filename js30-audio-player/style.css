@@ -45,14 +45,14 @@ a {
   left: 0;
   right: 0;
   max-width: 500px;
-  max-height: 500px;
+  max-height: 550px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 15px #000;
 }
 
 .song-img {
-  background-image: url('./assets/images/endless love.jpg');
+  background-image: url('./assets/images/Endless Love.jpg');
   background-position: center -100px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,7 +65,7 @@ a {
 }
 
 .song-img.active {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .audio-player__container {
@@ -85,7 +85,7 @@ a {
   justify-content: center;
   flex-direction: column;
   align-self: center;
-  width: 50%;
+  width: 55%;
 }
 
 .song-title {
