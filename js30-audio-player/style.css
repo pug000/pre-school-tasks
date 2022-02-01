@@ -74,7 +74,7 @@ a {
   justify-content: space-evenly;
   flex-direction: column;
   align-self: flex-end;
-  background-color: rgb(143, 106, 146);
+  background-color: #000;
   height: 30%;
   bottom: 0;
   padding: 5px 5px 10px 5px;
@@ -93,6 +93,7 @@ a {
   font-size: 20px;
   line-height: 20px;
   padding-bottom: 5px;
+  color: #03f703;
 }
 
 .song-autor {
@@ -100,6 +101,7 @@ a {
   font-size: 20px;
   line-height: 20px;
   padding-bottom: 10px;
+  filter: invert(1);
 }
 
 .buttons__box {
@@ -120,10 +122,11 @@ a {
   background-position: center;
   background-size: contain;
   transition: 0.3s;
+  filter: invert(1);
 }
 
 .prev-song:hover {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
 }
 
 .pause {
@@ -135,10 +138,11 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
+  filter: invert(1);
 }
 
 .pause:hover {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
 }
 
 .play {
@@ -150,6 +154,7 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
+  filter: invert(1);
 }
 
 .next-song {
@@ -161,10 +166,11 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
+  filter: invert(1);
 }
 
 .next-song:hover {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(96%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
 }
 
 .music-progress__box {
@@ -184,9 +190,69 @@ a {
 
 .progress-bar {
   width: 0;
-  background-color: coral;
+  background-color: #03f703;
   height: 100%;
 }
+
+.current-time {
+  color: #fff;
+}
+
+.duration-time {
+  color: #fff;
+}
+
+.volume__box {
+  position: absolute;
+  left: 90%;
+  bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 5px 5px;
+  margin-left: 5px;
+  height: 120px;
+  justify-content: flex-end;
+  width: 25px;
+}
+
+.volume-button {
+  background-image: url('./assets/icons/volume-active.svg');
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.volume-button.muted {
+  background-image: url('./assets/icons/volume-mute.svg');
+}
+
+.volume-progress__container {
+  width: 8px;
+  height: 0;
+  background-color: #fff;
+  align-self: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 27px;
+  left: 5px;
+  transition: 0.25s;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+
+
+.volume-progress {
+  height: 100%;
+  width: 100%;
+  background-color: #03f703;
+}
+
 
 footer {
   background-color: #000;
