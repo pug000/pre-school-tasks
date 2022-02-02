@@ -17,6 +17,7 @@ const titleSong = document.querySelector('.song-title');
 const autorSong = document.querySelector('.song-autor');
 const background = document.querySelector('.background');
 const songImg = document.querySelector('.song-img');
+const loopBtn = document.querySelector('.loop-song');
 let isPlay = false;
 let playNum = 0;
 let songs = ['Endless Love', 'Let It Happen', 'KILLKA', 'Blue Monday', 'Vanished'];
@@ -29,20 +30,19 @@ function loadSongs(song, autor) {
   audio.src = `./assets/music/${song}.mp3`;
   background.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
   songImg.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
-
-}
+};
 
 nextBtn.addEventListener('click', playNext);
-prevBtn.addEventListener('click', playPrev)
+prevBtn.addEventListener('click', playPrev);
 
 function playNext() {
   playNum++;
   if (playNum > songs.length - 1) {
     playNum = 0;
-  }
+  };
   loadSongs(songs[playNum], songAutors[playNum]);
   playAudio();
-}
+};
 
 function playPrev() {
   playNum--;
@@ -51,7 +51,7 @@ function playPrev() {
   }
   loadSongs(songs[playNum], songAutors[playNum]);
   playAudio();
-}
+};
 
 //////////////////////////play-pause//////////////////////////
 function playAudio() {
@@ -78,6 +78,9 @@ function updateProgressBar(event) {
   const { duration, currentTime } = event.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+  if (audio.currentTime === audio.duration) {
+    playNext();
+  };
 };
 
 progressContainer.addEventListener('click', setProgressBar);
@@ -93,40 +96,50 @@ function setProgressBar(event) {
 
 //////////////////////////current-duration timer//////////////////////////
 audio.addEventListener('loadeddata', () => {
-  audioDuration.textContent = getTimeAudio(audio.duration)
-})
+  audioDuration.textContent = getTimeAudio(audio.duration);
+});
 
 setInterval(() => {
   currTime.textContent = getTimeAudio(audio.currentTime);
-}, 100);
+}, 500);
 
 function getTimeAudio(number) {
   let sec = parseInt(number);
   let min = parseInt(sec / 60);
   sec -= min * 60;
   return `${min}:${String(sec % 60).padStart(2, 0)}`;
-}
+};
 
 //////////////////////////change volume//////////////////////////
 volumeBtn.addEventListener('click', (event) => {
   if (event.target.classList.contains('volume-button')) {
     event.target.classList.toggle('muted');
-  }
+  };
   event.target.classList.contains('muted') ? audio.muted = true : audio.muted = false;
-})
+});
 
 volumeBox.onmouseover = () => {
   volumeProgressContainer.style.height = '90px';
-}
+};
 volumeBox.onmouseout = () => {
   volumeProgressContainer.style.height = '0px';
-}
+};
 
-volumeProgressContainer.addEventListener('click', changeVolume)
+volumeProgressContainer.addEventListener('click', changeVolume);
 
 function changeVolume(event) {
   const lineHeight = window.getComputedStyle(volumeProgressContainer).height;
   const volumeY = event.offsetY / parseInt(lineHeight);
   audio.volume = volumeY;
   volumeProgress.style.height = volumeY * 100 + '%';
-}
+};
+
+//////////////////////////loop song//////////////////////////
+loopBtn.addEventListener('click', loopSong);
+
+function loopSong(event) {
+  if (event.target.classList.contains('loop-song')) {
+    event.target.classList.toggle('looped');
+  };
+  event.target.classList.contains('looped') ? audio.loop = true : audio.loop = false;
+};
