@@ -12,24 +12,23 @@ const audioDuration = document.querySelector('.duration-time');
 const volumeBtn = document.querySelector('.volume-button')
 const volumeProgressContainer = document.querySelector('.volume-progress__container');
 const volumeProgress = document.querySelector('.volume-progress');
-const volumeBox = document.querySelector('.volume__box');
 const titleSong = document.querySelector('.song-title');
 const autorSong = document.querySelector('.song-autor');
-const background = document.querySelector('.background');
-const songImg = document.querySelector('.song-img');
+const background = document.querySelector('img');
+const songImg = document.querySelector('.song-img img');
 const loopBtn = document.querySelector('.loop-song');
 let isPlay = false;
 let playNum = 0;
-let songs = ['Endless Love', 'Let It Happen', 'KILLKA', 'Blue Monday', 'Vanished'];
-let songAutors = ['DVRST, OBLXKQ', 'Tame Impala', 'Ghostface Playa, Fkbambam', 'HEALTH', 'Crystal Castle'];
+let songs = ['Endless Love', 'Let It Happen', 'KILLKA', 'Blue Monday', 'Vanished', 'Shooting Stars'];
+let songAutors = ['DVRST, OBLXKQ', 'Tame Impala', 'Ghostface Playa, Fkbambam', 'HEALTH', 'Crystal Castle', 'Bag Raiders'];
 
 //////////////////////////change songs//////////////////////////
 function loadSongs(song, autor) {
   titleSong.innerHTML = song;
   autorSong.innerHTML = autor;
   audio.src = `./assets/music/${song}.mp3`;
-  background.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
-  songImg.style.backgroundImage = `url('./assets/images/${song}.jpg')`;
+  background.src = `./assets/images/${song}.jpg`;
+  songImg.src = `./assets/images/${song}.jpg`;
 };
 
 nextBtn.addEventListener('click', playNext);
@@ -117,13 +116,6 @@ volumeBtn.addEventListener('click', (event) => {
   };
   event.target.classList.contains('muted') ? audio.muted = true : audio.muted = false;
 });
-
-volumeBox.onmouseover = () => {
-  volumeProgressContainer.style.height = '90px';
-};
-volumeBox.onmouseout = () => {
-  volumeProgressContainer.style.height = '0px';
-};
 
 volumeProgressContainer.addEventListener('click', changeVolume);
 

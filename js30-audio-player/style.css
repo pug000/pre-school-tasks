@@ -6,15 +6,10 @@
   padding: 0;
 }
 
-main {
-  display: flex;
-}
-
 body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
-  display: flex;
   background: #000;
 }
 
@@ -22,51 +17,53 @@ a {
   text-decoration: none;
 }
 
-.background {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.background img {
   position: absolute;
   width: 100%;
   height: 100%;
   filter: blur(10px);
+  object-fit: cover;
   z-index: -1;
-  background-image: url('./assets/images/Endless Love.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 70%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .container {
-  position: absolute;
+  position: relative;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   max-width: 500px;
-  height: 550px;
+  height: auto;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 15px #000;
 }
 
-.song-img {
-  background-image: url('./assets/images/Endless Love.jpg');
-  background-position: center -100px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.song-img img {
   width: 100%;
   height: 100%;
-  position: absolute;
+  object-fit: cover;
   z-index: -1;
   transform: scale(1);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .song-img.active {
@@ -80,9 +77,9 @@ a {
   flex-direction: column;
   align-self: flex-end;
   background-color: #000;
-  height: 30%;
   bottom: 0;
   padding: 5px 5px 10px 5px;
+  z-index: 1;
 }
 
 .song-name__box {
@@ -90,7 +87,8 @@ a {
   justify-content: center;
   flex-direction: column;
   align-self: center;
-  width: 55%;
+  padding: 5px 0 5px 0;
+  width: 60%;
 }
 
 .song-title {
@@ -98,12 +96,12 @@ a {
   font-size: 20px;
   line-height: 20px;
   padding-bottom: 5px;
-  color: #03f703;
+  color: #0cdf28;
 }
 
 .song-autor {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   padding-bottom: 10px;
   filter: invert(1);
@@ -126,12 +124,12 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
-  transition: 0.3s;
-  filter: invert(1);
+  transition: 0.5s;
 }
 
 .prev-song:hover {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
 }
 
 .pause {
@@ -143,11 +141,12 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
-  filter: invert(1);
+  transition: 0.5s;
 }
 
 .pause:hover {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
 }
 
 .play {
@@ -159,7 +158,6 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
-  filter: invert(1);
 }
 
 .next-song {
@@ -171,11 +169,12 @@ a {
   border: none;
   background-position: center;
   background-size: contain;
-  filter: invert(1);
+  transition: 0.5s;
 }
 
 .next-song:hover {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
 }
 
 .song-progress__box {
@@ -186,17 +185,39 @@ a {
   align-items: center;
 }
 
+.loop-song {
+  background-image: url('./assets/icons/non-looped.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.loop-song.looped {
+  background-image: url('./assets/icons/looped.svg');
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+}
+
 .progress__container {
   width: 60%;
   height: 5px;
   background-color: #fff;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .progress-bar {
   width: 0;
-  background-color: #03f703;
+  background-color: #0cdf28;
   height: 100%;
+  border-radius: 15px;
 }
 
 .current-time {
@@ -207,32 +228,17 @@ a {
   color: #fff;
 }
 
-.volume__box {
-  position: absolute;
-  left: 90%;
-  bottom: 4%;
-  top: 90;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  gap: 5px 5px;
-  margin-left: 5px;
-  height: 120px;
-  justify-content: flex-end;
-  width: 25px;
-}
-
 .volume-button {
   background-image: url('./assets/icons/volume-active.svg');
   background-position: center;
   background-size: contain;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   border: none;
   filter: invert(1);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .volume-button.muted {
@@ -246,51 +252,28 @@ a {
   align-self: center;
   cursor: pointer;
   position: absolute;
-  bottom: 27px;
-  left: 5px;
+  bottom: 8%;
+  left: 93%;
   transition: 0.25s;
   z-index: 10;
   transform: rotate(180deg);
+  transition: 0.5s;
 }
 
+.volume__box:hover .volume-progress__container {
+  height: 90px;
+}
 
 .volume-progress {
   height: 100%;
   width: 100%;
-  background-color: #03f703;
+  background-color: #0cdf28;
 }
-
-.loop-song {
-  background-image: url('./assets/icons/non-looped.svg');
-  background-position: center;
-  background-size: contain;
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  border: none;
-  filter: invert(1);
-  margin-left: 5px;
-  margin-right: 5px;
-  position: absolute;
-  left: 3%;
-  right: 0;
-  top: 92%;
-  bottom: 0;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.loop-song.looped {
-  background-image: url('./assets/icons/looped.svg');
-  filter: brightness(0) saturate(100%) invert(49%) sepia(90%) saturate(2196%) hue-rotate(83deg) brightness(118%) contrast(126%);
-}
-
 
 footer {
   background-color: #000;
   width: 100%;
   position: absolute;
-  top: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -327,4 +310,15 @@ footer {
   width: 110px;
   height: 80px;
   filter: invert(1);
+}
+
+@media (max-width:360px) {
+  .volume-progress__container {
+    bottom: 10%;
+    left: 91%;
+  }
+
+  footer {
+    padding: 7px 30px 7px 30px;
+  }
 }

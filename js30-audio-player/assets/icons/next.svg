@@ -1,20 +1,13 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.16, written by Peter Selinger 2001-2019
-</metadata>
-<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M4341 4919 c-206 -40 -381 -172 -471 -353 -71 -144 -70 -127 -70
--1009 l0 -788 -37 31 c-54 45 -3177 1846 -3238 1867 -73 26 -203 23 -278 -6
--81 -32 -167 -114 -209 -199 l-33 -67 0 -1905 0 -1905 28 -56 c42 -87 98 -143
-183 -186 64 -31 88 -37 158 -41 58 -3 99 1 137 12 65 19 3182 1815 3247 1871
-l42 36 0 -723 c0 -810 0 -801 70 -944 131 -263 429 -408 720 -350 203 41 376
-173 463 356 25 52 50 119 56 148 15 75 15 3629 0 3704 -6 29 -31 96 -56 148
--86 180 -260 315 -455 354 -83 17 -186 19 -257 5z"/>
-</g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M335.7,250.6L148.5,102.8c-4.9-3.9-12-3-15.9,1.9c-1.6,2-2.4,4.5-2.4,7v294.2c0,6.3,5.1,11.3,11.3,11.3
+	c2.5,0,5-0.8,7-2.4l187.1-146.3c4.9-3.8,5.8-11,2-15.9C337,251.8,336.4,251.1,335.7,250.6L335.7,250.6z M152.8,382.6V135.1
+	l157.5,124.4L152.8,382.6z"/>
+<path class="st0" d="M369.2,93.4c-6.3,0-11.3,5.1-11.3,11.3v302.5c0,6.3,5.1,11.3,11.3,11.3c6.3,0,11.3-5.1,11.3-11.3V104.7
+	C380.6,98.4,375.5,93.4,369.2,93.4z"/>
 </svg>
