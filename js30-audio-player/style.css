@@ -274,8 +274,10 @@ footer {
   background-color: #000;
   width: 100%;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
   align-items: center;
   padding: 7px 50px 7px 50px;
   gap: 20px;
