@@ -70,6 +70,17 @@ main {
   transform: scale(1.05);
 }
 
+.song-gif img {
+  position: absolute;
+  top: -2%;
+  bottom: 0;
+  left: -4%;
+  right: 0;
+  width: 90%;
+  display: none;
+  transition: 0.5s;
+}
+
 .audio-player__container {
   width: 100%;
   display: flex;

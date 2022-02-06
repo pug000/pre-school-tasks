@@ -16,6 +16,7 @@ const titleSong = document.querySelector('.song-title');
 const autorSong = document.querySelector('.song-autor');
 const background = document.querySelector('img');
 const songImg = document.querySelector('.song-img img');
+const songGif = document.querySelector('.song-gif img');
 const loopBtn = document.querySelector('.loop-song');
 let isPlay = false;
 let playNum = 0;
@@ -56,12 +57,14 @@ function playPrev() {
 function playAudio() {
   pauseBtn.classList.add('play');
   scaleImg.classList.add('active');
+  songGif.style.display = 'block';
   audio.play();
 };
 
 function pauseAudio() {
   pauseBtn.classList.remove('play');
   scaleImg.classList.remove('active');
+  songGif.style.display = 'none';
   audio.pause();
 };
 
