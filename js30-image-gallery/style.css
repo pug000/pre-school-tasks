@@ -14,6 +14,7 @@ body {
 header {
   border-bottom: 5px solid #ac06ac;
   padding: 20px 20px 20px 20px;
+  margin-bottom: 30px;
 }
 
 .header__container {
@@ -75,4 +76,25 @@ header {
 
 .search-icon:hover {
   filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7479%) hue-rotate(297deg) brightness(84%) contrast(99%);
+}
+
+.image__container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.column__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 40px;
+  margin-bottom: 30px;
+}
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 380px;
+  height: 214px;
 }
