@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Prompt', sans-serif;
+}
+
+header {
+  border-bottom: 5px solid #ac06ac;
+  padding: 20px 20px 20px 20px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.title__container {
+  display: flex;
+}
+
+.logo {
+  background-image: url('./assets/icons/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 40px;
+  align-self: center;
+}
+
+.title {
+  width: 370px;
+}
+
+.search__container {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.search__container input {
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid #ac06ac;
+  box-sizing: border-box;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.search-icon {
+  background-image: url('./assets/icons/search.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 15%;
+  bottom: 0;
+  left: 90%;
+  right: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.search-icon:hover {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7479%) hue-rotate(297deg) brightness(84%) contrast(99%);
+}
