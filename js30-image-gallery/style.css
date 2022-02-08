@@ -9,12 +9,14 @@
 body {
   margin: 0 auto;
   font-family: 'Prompt', sans-serif;
+  background: #000;
 }
 
 header {
   border-bottom: 5px solid #ac06ac;
   padding: 20px 20px 20px 20px;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .header__container {
@@ -36,6 +38,7 @@ header {
   width: 50px;
   height: 40px;
   align-self: center;
+  filter: invert(1);
 }
 
 .title {
@@ -43,7 +46,7 @@ header {
 }
 
 .search__container {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   position: relative;
 }
@@ -97,4 +100,57 @@ header {
   background-position: center;
   width: 380px;
   height: 214px;
+  border: 2px solid #ac06ac;
+  cursor: zoom-in;
+}
+
+.img:focus {
+  cursor: zoom-out;
+}
+
+footer {
+  width: 100%;
+  border-top: 5px solid #ac06ac;
+}
+
+.footer__container {
+  background-color: #000;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 7px 50px 7px 50px;
+  gap: 20px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.github {
+  color: #fff;
+  background-image: url('./assets/icons/github.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+
+.year {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.rsschool-item {
+  background-image: url('./assets/icons/rs_school.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 80px;
+  filter: invert(1);
 }
