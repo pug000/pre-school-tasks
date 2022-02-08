@@ -315,7 +315,7 @@ footer {
   line-height: 20px;
 }
 
-.rsschool {
+.rsschool-item {
   background-image: url('./assets/icons/rs_school.svg');
   background-position: center;
   background-size: contain;
