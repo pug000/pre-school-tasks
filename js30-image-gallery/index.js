@@ -1,6 +1,9 @@
+const searchText = document.querySelector('.search-text');
+const searchSubmit = document.querySelector('.search-submit');
+const body = document.querySelector('body');
 const galleryContainer = document.querySelector('.column__wrapper');
 
-const url = 'https://api.unsplash.com/search/photos?query=spring&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+url = 'https://api.unsplash.com/search/photos?query=all&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg';
 
 async function getData() {
   const res = await fetch(url);
@@ -10,9 +13,17 @@ async function getData() {
 getData();
 
 function showData(data) {
-  console.log(data);
   data.results.forEach(elem => {
-    const img = `<div class="img" style="background-image: url(${elem.urls.regular});">`
+    const img = `<div class="img" style="background-image: url(${elem.urls.regular});">`;
     galleryContainer.insertAdjacentHTML('beforeend', img);
   })
+}
+
+searchText.addEventListener('change', changeUrl);
+searchSubmit.addEventListener('submit', changeUrl);
+
+function changeUrl() {
+  galleryContainer.innerHTML = "";
+  url = `https://api.unsplash.com/search/photos?query=${searchText.value}&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg`;
+  getData(url);
 }
