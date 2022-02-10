@@ -19,11 +19,11 @@ function showData(data) {
   })
 }
 
-searchText.addEventListener('change', changeUrl);
+searchText.addEventListener('change', changeUrl)
 searchSubmit.addEventListener('submit', changeUrl);
 
-function changeUrl() {
+function changeUrl(e) {
   galleryContainer.innerHTML = "";
-  url = `https://api.unsplash.com/search/photos?query=${searchText.value}&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg`;
+  url = `https://api.unsplash.com/search/photos?query=${e.target.value}&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg`;
   getData(url);
 }
