@@ -19,7 +19,7 @@ function showData(data) {
   })
 }
 
-searchText.addEventListener('change', changeUrl)
+searchText.addEventListener('keypress', changeUrl)
 searchSubmit.addEventListener('submit', changeUrl);
 
 function changeUrl(e) {

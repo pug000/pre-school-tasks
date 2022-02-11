@@ -13,7 +13,9 @@ body {
 }
 
 header {
-  border-bottom: 5px solid #ac06ac;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  border-image-slice: 1;
   padding: 20px 20px 20px 20px;
   margin-bottom: 30px;
   color: #fff;
@@ -48,17 +50,37 @@ header {
 .search__container {
   width: 400px;
   position: relative;
+  border-radius: 30px;
 }
+
+.search__container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  border-radius: 34px;
+  z-index: -1;
+}
+
+/* .search__text:focus {
+  background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+} */
 
 .search-text {
   width: 100%;
-  border-radius: 25px;
-  border: 1px solid #ac06ac;
-  box-sizing: border-box;
-  outline: none;
+  position: relative;
+  border-radius: 30px;
   padding: 10px 100px 10px 20px;
   font-size: 20px;
   transition: all 0.3s;
+  border: none;
+}
+
+.search-text:focus {
+  outline: none;
 }
 
 .search-submit {
@@ -99,17 +121,14 @@ header {
   background-position: center;
   width: 380px;
   height: 214px;
-  border: 2px solid #ac06ac;
-  cursor: zoom-in;
-}
-
-.img:focus {
-  cursor: zoom-out;
+  border-radius: 15px;
 }
 
 footer {
   width: 100%;
-  border-top: 5px solid #ac06ac;
+  border-top: 5px solid;
+  border-image: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  border-image-slice: 1;
 }
 
 .footer__container {
