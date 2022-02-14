@@ -23,7 +23,9 @@ searchText.addEventListener('keypress', changeUrl)
 searchSubmit.addEventListener('submit', changeUrl);
 
 function changeUrl(e) {
-  galleryContainer.innerHTML = "";
-  url = `https://api.unsplash.com/search/photos?query=${e.target.value}&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg`;
-  getData(url);
+  if (e.keyCode === 13) {
+    galleryContainer.innerHTML = "";
+    url = `https://api.unsplash.com/search/photos?query=${e.target.value}&per_page=30&orientation=landscape&client_id=GYIZ1_IevCrR3Y6hlMcbcsoMLulZh80f7tKT-WOCHVg`;
+    getData(url);
+  }
 }
