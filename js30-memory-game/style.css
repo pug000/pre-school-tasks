@@ -24,6 +24,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .game__card {
@@ -33,6 +34,7 @@ main {
   margin: 5px;
   transform-style: preserve-3d;
   transform: scale(1);
+  transition: transform .5s;
 }
 
 .game__card:active {
@@ -50,13 +52,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.game__back-card {
-  z-index: 1;
+  backface-visibility: hidden;
 }
 
 .game__front-card {
+  transform: rotateY(180deg);
+}
+
+/* .game__back-card {
+  z-index: 1;
+} */
+
+.game__card.flip {
   transform: rotateY(180deg);
 }
 
