@@ -5,3 +5,57 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+main {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__cards {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game__card {
+  position: relative;
+  width: calc(20% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  transform-style: preserve-3d;
+  transform: scale(1);
+}
+
+.game__card:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+.game__back-card,
+.game__front-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__back-card {
+  z-index: 1;
+}
+
+.game__front-card {
+  transform: rotateY(180deg);
+}
