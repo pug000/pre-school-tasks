@@ -35,6 +35,7 @@ main {
   transform-style: preserve-3d;
   transform: scale(1);
   transition: transform .5s;
+  cursor: pointer;
 }
 
 .game__card:active {
@@ -48,7 +49,7 @@ main {
   height: 100%;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
+  background: #203aad;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,10 +59,6 @@ main {
 .game__front-card {
   transform: rotateY(180deg);
 }
-
-/* .game__back-card {
-  z-index: 1;
-} */
 
 .game__card.flip {
   transform: rotateY(180deg);
