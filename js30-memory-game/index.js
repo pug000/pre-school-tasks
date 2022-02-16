@@ -1,7 +1,12 @@
 const cards = document.querySelectorAll('.game__card');
+const movesCount = document.querySelector('.moves');
+const timeCount = document.querySelector('.timer');
 let lockBoard = false;
 let hasFlippedCard = false;
 let firstCard, secondCard;
+let moves = 0;
+let mins = 0;
+let secs = 0;
 
 cards.forEach(elem => elem.addEventListener('click', flipCard))
 
@@ -15,6 +20,7 @@ function flipCard() {
   } else {
     secondCard = this;
     checkMatch();
+    setMoves();
   }
 }
 
@@ -53,3 +59,17 @@ function resetBoard() {
     elem.style.order = randomCards;
   });
 })();
+
+setInterval(function () {
+  secs++;
+  if (secs === 60) {
+    mins++;
+    secs = 0;
+  }
+  timeCount.textContent = `${(mins > 9) ? mins : '0' + mins}:${(secs > 9) ? secs : '0' + secs}`;
+}, 1000)
+
+function setMoves() {
+  moves++;
+  movesCount.innerHTML = moves;
+}

@@ -8,23 +8,42 @@
 
 body {
   background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  font-family: 'Bebas Neue', cursive;
+  color: #fff;
+  font-size: 64px;
 }
 
 main {
   display: flex;
   height: 90vh;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
-.game__cards {
+.state {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr;
+  grid-template-rows: 0.1fr 0.1fr;
+  align-content: center;
+  row-gap: 200px;
+}
+
+.moves {
+  justify-self: center;
+}
+
+.record-table {
+  width: 280px;
+  padding-top: 90px;
+}
+
+.game {
   width: 640px;
   height: 640px;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
+  align-self: center;
 }
 
 .game__card {
@@ -106,4 +125,48 @@ footer {
   width: 110px;
   height: 80px;
   filter: invert(1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+}
+
+.close {
+  align-self: flex-end;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+  color: #5cf;
+}
+
+.play-again__btn {
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.play-again__btn:hover,
+.play-again__btn:focus {
+  color: #5cf;
 }
