@@ -36,6 +36,13 @@ main {
   padding-top: 90px;
 }
 
+.record__items {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 35px;
+}
+
 .game {
   width: 640px;
   height: 640px;

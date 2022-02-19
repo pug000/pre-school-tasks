@@ -7,6 +7,7 @@ const winGameModal = document.querySelector('.win__modal');
 const startGameBtn = document.querySelector('.play__btn');
 const againPlayBtn = document.querySelector('.play-again__btn');
 const result = document.querySelector('.result');
+const recordTable = document.querySelector('.record__items');
 let lockBoard = false;
 let hasFlippedCard = false;
 let firstCard, secondCard;
@@ -16,6 +17,7 @@ let time;
 let mins = 0;
 let secs = 0;
 let endGame = 0;
+let recordsArrays = JSON.parse(localStorage.getItem('record')) || [];
 
 
 againPlayBtn.addEventListener('click', restartGame);
@@ -29,6 +31,20 @@ function funishGame() {
     winGameModal.style.display = 'block';
     clearInterval(time);
     result.innerHTML = `In ${moves + 1} moves`;
+    const recordItem = {
+      record: `moves: ${moves + 1}, time: ${timeCount.textContent}`
+    }
+    if (recordsArrays.length < 10) {
+      recordsArrays.push(recordItem);
+    }
+    if (recordsArrays.length === 10) {
+      recordsArrays.shift(recordItem);
+      recordsArrays.push(recordItem);
+    }
+    console.log(recordsArrays.length);
+    console.log(recordsArrays);
+    localStorage.setItem('record', JSON.stringify(recordsArrays));
+    showRecord(recordsArrays, recordTable)
   }
 }
 
@@ -102,3 +118,12 @@ function setMoves() {
   moves++;
   movesCount.innerHTML = moves;
 }
+
+function showRecord(recordsArrays, recordTable) {
+  recordTable.innerHTML = recordsArrays.map((elem, index) => {
+    return `<span class="record__item" data-index="${index + 1}">${elem.record}</span>`
+  }).join('')
+  localStorage.setItem('record', JSON.stringify(recordsArrays));
+}
+
+showRecord(recordsArrays, recordTable)
