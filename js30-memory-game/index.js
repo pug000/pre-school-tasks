@@ -8,11 +8,11 @@ const startGameBtn = document.querySelector('.play__btn');
 const againPlayBtn = document.querySelector('.play-again__btn');
 const result = document.querySelector('.result');
 const recordTable = document.querySelector('.record__items');
+const devBtn = document.querySelector('.dev__btn')
 let lockBoard = false;
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let moves = 0;
-let timeStart = false;
 let time;
 let mins = 0;
 let secs = 0;
@@ -41,8 +41,6 @@ function funishGame() {
       recordsArrays.shift(recordItem);
       recordsArrays.push(recordItem);
     }
-    console.log(recordsArrays.length);
-    console.log(recordsArrays);
     localStorage.setItem('record', JSON.stringify(recordsArrays));
     showRecord(recordsArrays, recordTable)
   }
@@ -127,3 +125,14 @@ function showRecord(recordsArrays, recordTable) {
 }
 
 showRecord(recordsArrays, recordTable)
+
+devBtn.addEventListener('click', getDevMod)
+
+function getDevMod(e) {
+  if (devBtn) {
+    e.target.classList.toggle('active');
+  }
+  if (e.target.classList.contains('active')) {
+    endGame = 18;
+  }
+}
