@@ -7,7 +7,7 @@ const winGameModal = document.querySelector('.win__modal');
 const startGameBtn = document.querySelector('.play__btn');
 const againPlayBtn = document.querySelector('.play-again__btn');
 const result = document.querySelector('.result');
-const recordTable = document.querySelector('.record__items');
+const highScoreTable = document.querySelector('.high-score__items');
 const devBtn = document.querySelector('.dev__btn')
 let lockBoard = false;
 let hasFlippedCard = false;
@@ -17,7 +17,7 @@ let time;
 let mins = 0;
 let secs = 0;
 let endGame = 0;
-let recordsArrays = JSON.parse(localStorage.getItem('record')) || [];
+let highScoreArrays = JSON.parse(localStorage.getItem('highScore')) || [];
 
 
 againPlayBtn.addEventListener('click', restartGame);
@@ -31,18 +31,18 @@ function funishGame() {
     winGameModal.style.display = 'block';
     clearInterval(time);
     result.innerHTML = `In ${moves + 1} moves`;
-    const recordItem = {
-      record: `moves: ${moves + 1}, time: ${timeCount.textContent}`
+    const highScoreItem = {
+      highScore: `moves: ${moves + 1}, time: ${timeCount.textContent}`
     }
-    if (recordsArrays.length < 10) {
-      recordsArrays.push(recordItem);
+    if (highScoreArrays.length < 10) {
+      highScoreArrays.push(highScoreItem);
     }
-    if (recordsArrays.length === 10) {
-      recordsArrays.shift(recordItem);
-      recordsArrays.push(recordItem);
+    if (highScoreArrays.length === 10) {
+      highScoreArrays.shift(highScoreItem);
+      highScoreArrays.push(highScoreItem);
     }
-    localStorage.setItem('record', JSON.stringify(recordsArrays));
-    showRecord(recordsArrays, recordTable)
+    localStorage.setItem('highScore', JSON.stringify(highScoreArrays));
+    showHighScore(highScoreArrays, highScoreTable)
   }
 }
 
@@ -117,14 +117,14 @@ function setMoves() {
   movesCount.innerHTML = moves;
 }
 
-function showRecord(recordsArrays, recordTable) {
-  recordTable.innerHTML = recordsArrays.map((elem, index) => {
-    return `<span class="record__item" data-index="${index + 1}">${elem.record}</span>`
+function showHighScore(highScoreArrays, highScoreTable) {
+  highScoreTable.innerHTML = highScoreArrays.map((elem, index) => {
+    return `<span class="high-score__item" data-index="${index + 1}">${elem.highScore}</span>`
   }).join('')
-  localStorage.setItem('record', JSON.stringify(recordsArrays));
+  localStorage.setItem('highScore', JSON.stringify(highScoreArrays));
 }
 
-showRecord(recordsArrays, recordTable)
+showHighScore(highScoreArrays, highScoreTable)
 
 devBtn.addEventListener('click', getDevMod)
 

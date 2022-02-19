@@ -20,7 +20,7 @@ main {
 }
 
 .dev__mod {
-  position: absolute;
+  display: flex;
 }
 
 .dev__btn {
@@ -58,12 +58,17 @@ main {
   justify-self: center;
 }
 
-.record-table {
+.high-score__table {
   width: 280px;
   padding-top: 90px;
 }
 
-.record__items {
+.high-score {
+  display: flex;
+  justify-content: center;
+}
+
+.high-score__items {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
