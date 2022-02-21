@@ -19,33 +19,6 @@ main {
   justify-content: space-evenly;
 }
 
-.dev__mod {
-  display: flex;
-}
-
-.dev__btn {
-  border: 0px;
-  height: 45px;
-  width: 150px;
-  background-color: #203aad;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.dev__btn:hover {
-  background-color: #f64f59;
-}
-
-.dev__btn.active {
-  background-color: #f64f59;
-}
-
-.dev__btn.active:hover {
-  background-color: #203aad;
-}
-
 .state {
   display: grid;
   grid-template-columns: 0.1fr 0.1fr;

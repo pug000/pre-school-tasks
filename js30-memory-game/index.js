@@ -8,7 +8,6 @@ const startGameBtn = document.querySelector('.play__btn');
 const againPlayBtn = document.querySelector('.play-again__btn');
 const result = document.querySelector('.result');
 const highScoreTable = document.querySelector('.high-score__items');
-const devBtn = document.querySelector('.dev__btn')
 let lockBoard = false;
 let hasFlippedCard = false;
 let firstCard, secondCard;
@@ -125,14 +124,3 @@ function showHighScore(highScoreArrays, highScoreTable) {
 }
 
 showHighScore(highScoreArrays, highScoreTable)
-
-devBtn.addEventListener('click', getDevMod)
-
-function getDevMod(e) {
-  if (devBtn) {
-    e.target.classList.toggle('active');
-  }
-  if (e.target.classList.contains('active')) {
-    endGame = 18;
-  }
-}
