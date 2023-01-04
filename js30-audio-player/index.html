@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
+  <title>Music Player</title>
+</head>
+
+<body>
+  <main>
+    <div class="background">
+      <img src="assets/images/Endless Love.jpg" alt="background">
+    </div>
+    <audio src="./assets/music/Endless Love.mp3" class="audio"></audio>
+    <div class="container">
+      <div class="song-img">
+        <img src="assets/images/Endless Love.jpg" alt="cover">
+      </div>
+      <div class="song-gif">
+        <img src="assets/images/pepoDance.gif" alt="">
+      </div>
+      <div class="audio-player__container">
+        <div class="song-name__box">
+          <h1 class="song-title">Endless Love</h1>
+          <h2 class="song-autor">DVRST, OBLXKQ</h2>
+        </div>
+        <div class="buttons__box">
+          <button class="prev-song"></button>
+          <button class="pause"></button>
+          <button class="next-song"></button>
+        </div>
+        <div class="song-progress__box">
+          <button class="loop-song"></button>
+          <div class="current-time">0:00</div>
+          <div class="progress__container">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="duration-time"></div>
+          <div class="volume__box">
+            <div class="volume-progress__container">
+              <div class="volume-progress"></div>
+            </div>
+            <button class="volume-button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="https://github.com/pug000" class="github-link">
+      <div class="github"></div>
+    </a>
+    <div class="year">2022</div>
+    <div class="rsschool">
+      <a href="https://rs.school/js-stage0/" class="rsschool-link">
+        <div class="rsschool-item"></div>
+      </a>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>

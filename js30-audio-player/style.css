@@ -1,0 +1,337 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #000;
+}
+
+.song-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.song-img.active {
+  transform: scale(1.05);
+}
+
+.song-gif img {
+  position: absolute;
+  top: -2%;
+  bottom: 0;
+  left: -4%;
+  right: 0;
+  width: 90%;
+  display: none;
+  transition: 0.5s;
+}
+
+.audio-player__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-self: flex-end;
+  background-color: #000;
+  bottom: 0;
+  padding: 5px 5px 10px 5px;
+  z-index: 1;
+}
+
+.song-name__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  padding: 5px 0 5px 0;
+  width: 60%;
+}
+
+.song-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 5px;
+  color: #0cdf28;
+}
+
+.song-autor {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.buttons__box {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  width: 90%;
+  align-self: center;
+}
+
+.prev-song {
+  cursor: pointer;
+  background-image: url('./assets/icons/prev.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+.prev-song:hover {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
+}
+
+.pause {
+  cursor: pointer;
+  background-image: url('./assets/icons/play.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+.pause:hover {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
+}
+
+.play {
+  cursor: pointer;
+  background-image: url('./assets/icons/pause.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+}
+
+.next-song {
+  cursor: pointer;
+  background-image: url('./assets/icons/next.svg');
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+.next-song:hover {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+  transform: scale(1.2);
+}
+
+.song-progress__box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 5px;
+  align-items: center;
+}
+
+.loop-song {
+  background-image: url('./assets/icons/non-looped.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.loop-song.looped {
+  background-image: url('./assets/icons/looped.svg');
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(5010%) hue-rotate(86deg) brightness(105%) contrast(97%);
+}
+
+.progress__container {
+  width: 60%;
+  height: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.progress-bar {
+  width: 0;
+  background-color: #0cdf28;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.current-time {
+  color: #fff;
+}
+
+.duration-time {
+  color: #fff;
+}
+
+.volume-button {
+  background-image: url('./assets/icons/volume-active.svg');
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.volume-button.muted {
+  background-image: url('./assets/icons/volume-mute.svg');
+}
+
+.volume-progress__container {
+  width: 8px;
+  height: 0;
+  background-color: #fff;
+  align-self: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 8%;
+  left: 93%;
+  transition: 0.25s;
+  z-index: 10;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.volume__box:hover .volume-progress__container {
+  height: 90px;
+}
+
+.volume-progress {
+  height: 100%;
+  width: 100%;
+  background-color: #0cdf28;
+}
+
+footer {
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 7px 50px 7px 50px;
+  gap: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.github {
+  color: #fff;
+  background-image: url('./assets/icons/github.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+
+.year {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.rsschool-item {
+  background-image: url('./assets/icons/rs_school.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 80px;
+  filter: invert(1);
+}
+
+@media (max-width:360px) {
+  .volume-progress__container {
+    bottom: 10%;
+    left: 91%;
+  }
+
+  footer {
+    padding: 7px 30px 7px 30px;
+  }
+}
